@@ -5,7 +5,6 @@ from EmployeeApp import views
 from django.conf.urls.static import static
 from django.conf import settings
 
-
 urlpatterns = [
     # url department sẽ thực hiện API tương ứng  
     url(r'^department/$',views.departmentApi),

@@ -17,6 +17,7 @@ import os
 
 # Đưởng dẫn file chính
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+print (BASE_DIR)
 # URL xử lý các tệp lưu trữ từ MEDIA_ROOT
 MEDIA_URL = '/media/'
 # Thành phần đường dẫn được tham gia là folder media
@@ -33,7 +34,11 @@ SECRET_KEY = 'django-insecure-ka^&ku#+72p2pjw0+#5y+$a(e-j#20)&8u@-#dl^y&#3z!o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "https://emp-management.com",
+    "http://127.0.0.1:8000",
+    "127.0.0.1"
+]
 
 
 # Application definition
@@ -51,6 +56,27 @@ INSTALLED_APPS = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

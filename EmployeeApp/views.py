@@ -13,7 +13,8 @@ from django.core.files.storage import default_storage
 @csrf_exempt
 def departmentApi(request,id=0):
     
-    # Lấy thông tin trang web     
+    # Lấy thông tin trang web  
+    print("vai cac")   
     if request.method =='GET':
         # Truy xuất tất cả tối tượng trong database
         departments = Departments.objects.all()
